@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/products_overview_screen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -8,24 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  //...
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter App'),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        // ignore: deprecated_member_use
+        accentColor: Colors.purpleAccent,
       ),
-      body: Center(
-        child: Text('Widget Playground'),
-      ),
+      home: ProductsOverviewScreen(),
     );
   }
 }
