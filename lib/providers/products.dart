@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/product.dart';
 
 class Products with ChangeNotifier {
+  // ignore: prefer_final_fields
   List<Product> _items = [
     Product(
       id: 'p1',
@@ -40,6 +41,10 @@ class Products with ChangeNotifier {
 
   List<Product> get items {
     return [..._items];
+  }
+
+  Product findById(String id) {
+    return _items.firstWhere((prod) => prod.id == id);
   }
 
   void addProduct() {

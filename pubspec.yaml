@@ -73,13 +73,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: PlayfairDisplay
+    - family: Vollkorn
       fonts:
-        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
-        - asset: assets/fonts/PlayfairDisplay-Italic.ttf
+        - asset: assets/fonts/Vollkorn-Regular.ttf
+        - asset: assets/fonts/Vollkorn-Italic.ttf
           style: italic
 
-        - asset: assets/fonts/PlayfairDisplay-Bold.ttf
+        - asset: assets/fonts/Vollkorn-Bold.ttf
           weight: 700
   #   - family: Trajan Pro
   #     fonts:
