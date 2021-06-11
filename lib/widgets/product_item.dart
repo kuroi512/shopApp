@@ -7,11 +7,7 @@ class ProductItem extends StatelessWidget {
   final String title;
   final String imageUrl;
 
-  ProductItem(
-    this.id,
-    this.title,
-    this.imageUrl,
-  );
+  ProductItem(this.id, this.title, this.imageUrl);
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
