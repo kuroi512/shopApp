@@ -8,24 +8,20 @@ import '../screens/products_overview_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  //...
-
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (BuildContext _) => Products(),
+    return ChangeNotifierProvider.value(
+      value: Products(),
       child: MaterialApp(
-        theme: ThemeData(
-          primarySwatch: Colors.purple,
-          // ignore: deprecated_member_use
-          accentColor: Colors.purpleAccent,
-          fontFamily: 'Vollkorn',
-        ),
-        home: ProductsOverviewScreen(),
-        routes: {
-          ProducDetailScreen.routName: (ctx) => ProducDetailScreen(),
-        },
-      ),
+          theme: ThemeData(
+            primarySwatch: Colors.purple,
+            accentColor: Colors.purpleAccent,
+            fontFamily: 'Vollkorn',
+          ),
+          home: ProductsOverviewScreen(),
+          routes: {
+            ProducDetailScreen.routName: (ctx) => ProducDetailScreen(),
+          }),
     );
   }
 }
