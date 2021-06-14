@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext ctx) => Products(),
+      create: (BuildContext _) => Products(),
       child: MaterialApp(
         theme: ThemeData(
           primarySwatch: Colors.purple,
+          // ignore: deprecated_member_use
           accentColor: Colors.purpleAccent,
           fontFamily: 'Vollkorn',
         ),
