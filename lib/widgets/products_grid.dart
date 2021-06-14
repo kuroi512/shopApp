@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../providers/product.dart';
 import '../providers/products.dart';
 import '../widgets/product_item.dart';
 
 class ProductsGrid extends StatelessWidget {
+//..
+
   @override
   Widget build(BuildContext context) {
     final productsData = Provider.of<Products>(context);
@@ -14,15 +17,7 @@ class ProductsGrid extends StatelessWidget {
         itemCount: products.length,
         itemBuilder: (BuildContext ctx, int i) => ChangeNotifierProvider.value(
               value: products[i],
-
-              // create: (BuildContext c) {
-              //   products[i];
-              // },
-              child: ProductItem(
-                  // products[i].id,
-                  // products[i].title,
-                  // products[i].imageUrl,
-                  ),
+              child: ProductItem(),
             ),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
