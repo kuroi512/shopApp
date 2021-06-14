@@ -8,7 +8,7 @@ class ProducDetailScreen extends StatelessWidget {
   // final double price;
 
   // ProducDetailScreen(this.title, this.price);
-  static const routName = '/product-detail';
+  static const routeName = '/product-detail';
   @override
   Widget build(BuildContext context) {
     final productId = ModalRoute.of(context)!.settings.arguments as String;
