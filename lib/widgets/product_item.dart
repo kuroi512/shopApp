@@ -50,7 +50,9 @@ class ProductItem extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           trailing: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              cart.addItem(product.id, product.price, product.title);
+            },
             // ignore: prefer_const_constructors
             icon: Icon(
               Icons.shopping_cart,
