@@ -10,8 +10,6 @@ class CartItem extends StatelessWidget {
   final int quantity;
   final String title;
 
-  // ignore: use_key_in_widget_constructors
-  // ignore: prefer_const_constructors_in_immutables
   CartItem(
     this.id,
     this.productId,
@@ -41,6 +39,34 @@ class CartItem extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 15, vertical: 4),
       ),
       direction: DismissDirection.endToStart,
+      confirmDismiss: (direction) {
+        return showDialog(
+          context: context,
+          // ignore: prefer_const_constructors
+          builder: (ctx) => AlertDialog(
+            // ignore: prefer_const_constructors
+            title: Text('Are you sure?'),
+            // ignore: prefer_const_constructors
+            content: Text('Do you want to remove the item from the cart?'),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {
+                  Navigator.of(ctx).pop(false);
+                },
+                // ignore: prefer_const_constructors
+                child: Text('No'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(ctx).pop(true);
+                },
+                // ignore: prefer_const_constructors
+                child: Text('Yes'),
+              ),
+            ],
+          ),
+        );
+      },
       onDismissed: (direction) {
         Provider.of<Cart>(context, listen: false).removeItem(productId);
       },
@@ -59,6 +85,7 @@ class CartItem extends StatelessWidget {
                 // ignore: prefer_const_constructors
                 padding: EdgeInsets.all(3),
                 child: FittedBox(
+                  // ignore: unnecessary_brace_in_string_interps
                   child: Text('\$${price}'),
                 ),
               ),

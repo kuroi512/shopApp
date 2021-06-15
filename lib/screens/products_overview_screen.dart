@@ -24,7 +24,8 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Shop'),
+        // ignore: prefer_const_constructors
+        title: Text('MyShop'),
         actions: <Widget>[
           PopupMenuButton(
             onSelected: (FilterOptions selectedValue) {
@@ -36,16 +37,21 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
                 }
               });
             },
+            // ignore: prefer_const_constructors
             icon: Icon(
               Icons.more_vert,
             ),
             itemBuilder: (_) => [
+              // ignore: prefer_const_constructors
               PopupMenuItem(
+                // ignore: prefer_const_constructors
                 child: Text('OnlyFavorites'),
                 value: FilterOptions.Favorites,
               ),
+              // ignore: prefer_const_constructors
               PopupMenuItem(
-                child: Text('Show All'),
+                // ignore: prefer_const_constructors
+                child: Text('Show Asll'),
                 value: FilterOptions.All,
               ),
             ],
@@ -57,6 +63,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
               color: Colors.purple,
             ),
             child: IconButton(
+              // ignore: prefer_const_constructors
               icon: Icon(
                 Icons.shopping_cart,
               ),
