@@ -56,6 +56,7 @@ class CartScreen extends StatelessWidget {
               ),
             ),
           ),
+          // ignore: prefer_const_constructors
           SizedBox(
             height: 10,
           ),
