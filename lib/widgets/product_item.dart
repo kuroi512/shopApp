@@ -5,6 +5,7 @@ import '../providers/cart.dart';
 import '../screens/product_detail_screen.dart';
 import '../providers/product.dart';
 
+// ignore: use_key_in_widget_constructors
 class ProductItem extends StatelessWidget {
   // final String id;
   // final String title;
@@ -38,11 +39,13 @@ class ProductItem extends StatelessWidget {
               icon: Icon(
                 product.isFavorite ? Icons.favorite : Icons.favorite_border,
               ),
+              // ignore: deprecated_member_use
               color: Theme.of(context).accentColor,
               onPressed: () {
                 product.toggleFavoriteStatus();
               },
             ),
+            // ignore: prefer_const_constructors
             child: Text('Never changes!'),
           ),
           title: Text(
@@ -57,6 +60,7 @@ class ProductItem extends StatelessWidget {
             icon: Icon(
               Icons.shopping_cart,
             ),
+            // ignore: deprecated_member_use
             color: Theme.of(context).accentColor,
           ),
         ),

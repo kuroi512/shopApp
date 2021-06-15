@@ -22,5 +22,6 @@ class Product with ChangeNotifier {
     notifyListeners();
   }
 
+  // ignore: annotate_overrides
   void notifyListeners() {}
 }

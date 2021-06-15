@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/orders_screen.dart';
+
 class AppDrawer extends StatelessWidget {
 //..
 
@@ -25,7 +27,8 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.payment),
             title: Text('Orders'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed('/');
+              Navigator.of(context)
+                  .pushReplacementNamed(OrdersScreen.routeName);
             },
           )
         ],

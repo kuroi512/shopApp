@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/products.dart';
 
+// ignore: use_key_in_widget_constructors
 class ProducDetailScreen extends StatelessWidget {
   // final String title;
   // final double price;
@@ -23,6 +24,7 @@ class ProducDetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // ignore: sized_box_for_whitespace
             Container(
               height: 400,
               width: double.infinity,
@@ -31,6 +33,7 @@ class ProducDetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
+            // ignore: prefer_const_constructors
             SizedBox(height: 10),
             Text(
               '\$${loadedProduct.price}',
@@ -40,8 +43,10 @@ class ProducDetailScreen extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
+            // ignore: prefer_const_constructors
             SizedBox(height: 20),
             Container(
+              // ignore: prefer_const_constructors
               padding: EdgeInsets.symmetric(horizontal: 10),
               width: double.infinity,
               child: Text(

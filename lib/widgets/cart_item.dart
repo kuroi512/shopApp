@@ -10,6 +10,8 @@ class CartItem extends StatelessWidget {
   final int quantity;
   final String title;
 
+  // ignore: use_key_in_widget_constructors
+  // ignore: prefer_const_constructors_in_immutables
   CartItem(
     this.id,
     this.productId,
@@ -49,10 +51,12 @@ class CartItem extends StatelessWidget {
           vertical: 4,
         ),
         child: Padding(
+          // ignore: prefer_const_constructors
           padding: EdgeInsets.all(8),
           child: ListTile(
             leading: CircleAvatar(
               child: Padding(
+                // ignore: prefer_const_constructors
                 padding: EdgeInsets.all(3),
                 child: FittedBox(
                   child: Text('\$${price}'),
