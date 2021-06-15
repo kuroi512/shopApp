@@ -11,6 +11,7 @@ import './screens/orders_screen.dart';
 
 void main() => runApp(MyApp());
 
+// ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
   //...
 
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(
             primarySwatch: Colors.purple,
+            // ignore: deprecated_member_use
             accentColor: Colors.purpleAccent,
             fontFamily: 'Vollkorn',
           ),

@@ -39,6 +39,7 @@ class _OrderItemState extends State<OrderItem> {
           ),
           if (_expanded)
             Container(
+              // ignore: prefer_const_constructors
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 4),
               height: min(widget.order.products.length * 20.0 + 10, 180),
               child: ListView(
@@ -57,6 +58,7 @@ class _OrderItemState extends State<OrderItem> {
                           ),
                           Text(
                             '${prod.quantity}x\$${prod.price}',
+                            // ignore: prefer_const_constructors
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.grey,
